@@ -1,7 +1,12 @@
-<h1>Cocktails</h1>
 <% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  <br>
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2><%= cocktail.name %></h2>
+    <p>Very cool city, the best</p>
+  </div>
+  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+  <a class="card-link" href="<%= cocktail_path(cocktail) %>" ></a>
+</div>
 <% end %>
 
-<%= link_to "New Cocktail", new_cocktail_path %>
